@@ -165,11 +165,127 @@ body {
 
 .menu__link:hover,
 .menu__link:active,
-.menu__link:focus,
+.menu__link:focus {
+  color: var(--states-font-color);
+  transition: all 0.3s ease 0s;
+}
+
 ._active {
   color: var(--states-font-color);
 }
 
 /*--------------------*/
+
+/* WELCOME section */
+
+.welcome {
+  padding-top: 64px;
+  padding-bottom: 56px;
+}
+
+.welcome__container {}
+
+.welcome__content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcome__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  padding-top: 200px;
+}
+
+.welcome__tittle {
+  position: absolute;
+  top: 76px;
+  left: 0;
+  font-size: 64px;
+  font-weight: 600;
+  color: var(--font-color);
+}
+
+.welcome__benefits {
+  padding-top: 50px;
+}
+
+.welcome__item {
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--font-color);
+}
+
+.welcome__item span {
+  margin-right: 8px;
+}
+
+.welcome__buttons {
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.welcome__buttons > .welcome__btn:not(:last-child) {
+  margin-right: 20px;
+}
+
+.button {
+  width: 200px;
+  height: 60px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--font-color);
+  background-color: transparent;
+  border: 1px solid var(--main-color);
+  transition: all 0.3s ease 0s;
+}
+
+.button_colored {
+  color: #FFFFFF;
+  background-color: var(--main-color);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.button_colored .flare {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  transform: skewX(15deg);
+  animation: flareAnimation;
+  left: -150%;
+  background: linear-gradient(120deg, rgba(251, 188, 124, 0.1), rgba(255, 255, 255, 0.4));
+  animation: flareAnimation 3s infinite linear; 
+}
+
+@keyframes flareAnimation {
+  0% {
+      left: -150%;
+  }
+  100% {
+      left: 150%;
+  }
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  color: #FFFFFF;
+  background-color: var(--states-btn-color);
+  border-color: var(--states-btn-color);
+  transition: all 0.3s ease 0s;
+}
+
+.welcome__slider {
+  width: 50%;
+}
+
+.slider {}
 
 
