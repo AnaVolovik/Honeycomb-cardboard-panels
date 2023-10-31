@@ -197,7 +197,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   width: 50%;
-  padding-top: 200px;
+  padding-top: 80px;
 }
 
 .welcome__tittle {
@@ -207,6 +207,7 @@ body {
   font-size: 64px;
   font-weight: 600;
   color: var(--font-color);
+  z-index: 150;
 }
 
 .welcome__benefits {
@@ -283,9 +284,30 @@ body {
 }
 
 .welcome__slider {
-  width: 50%;
+  width: 640px;
+  height: 600px;
 }
 
-.slider {}
+.slider {
+  position: relative;
+}
+
+.slider__item {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  opacity: 0; 
+  transition: opacity 1s ease-in-out; 
+}
+
+img {
+  max-width: 100%;;
+}
+
+.slider__item.active {
+  opacity: 1;
+}
+
+
 
 
