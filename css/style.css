@@ -89,6 +89,7 @@ body {
 }
 
 .wrapper {
+  position: relative;
   max-width: 1920px;
   min-height: 100%;
   margin: 0 auto;
@@ -125,13 +126,9 @@ body {
   justify-content: space-between;
 }
 
-.header__logo {}
-
 .logo__image {
   max-width: 100%;
 }
-
-.header__contacts {}
 
 .contacts {
   display: flex;
@@ -182,8 +179,6 @@ body {
   padding-top: 64px;
   padding-bottom: 56px;
 }
-
-.welcome__container {}
 
 .welcome__content {
   position: relative;
@@ -306,8 +301,111 @@ img {
 
 .slider__item.active {
   opacity: 1;
+  z-index: 100;
 }
 
+/*--------------------*/
 
+/* FORM */
+
+._shaded {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  background-color: rgba(63, 61, 59, 0.28);
+  transition: all 0.3s ease 0s;
+  z-index: 200;
+}
+
+.form {
+  position: fixed;
+  top: calc(50% - 450px/2);
+  left: calc(50% - 640px/2);
+  display: none;
+  flex-direction: column;
+  width: 640px;
+  height: 450px;
+  padding: 40px 40px 27px 40px;
+  background-color: #FFFFFF;
+  z-index: 300;
+}
+
+.form__icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.form__tittle {
+  padding-bottom: 25px;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--font-color);
+}
+
+.form__subtittle {
+  padding-bottom: 40px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%;
+  color: var(--font-color);
+}
+
+.form__data {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__field {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--font-color);
+  background-color: #FFFFFF;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.form__label > .star {
+  color: #FF0202;
+}
+
+.form__input {
+  width: 560px;
+  height: 50px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--main-color);
+  background: #FFFFFF;
+}
+
+.required {
+  border: 1px solid #FF0202;
+}
+
+.form__button {
+  align-self: center;
+}
+
+._opened {
+  display: flex;
+}
+
+/*--------------------*/
 
 

@@ -24,13 +24,13 @@
         </div>
         <div class="header__contacts contacts">
           <div class="contacts__item">
-            <a href="" class="contacts__link link">
+            <a href="tel:+375297777777" class="contacts__link link">
               <img src="assets/images/icons/icon-phone.png" alt="phone" class="contacts__icon">
               <p class="contacts__text">+375 (29) 777 - 77 - 77</p>
             </a>
           </div>
           <div class="contacts__item">
-            <a href="" class="contacts__link link">
+            <a href="mailto:info@example.com" class="contacts__link link">
               <img src="assets/images/icons/icon-email.png" alt="email" class="contacts__icon">
               <p class="contacts__text">info@example.com</p>
             </a>
@@ -57,7 +57,7 @@
         </nav>
       </div>
     </header>
-    <sectioon class="welcome">
+    <section class="welcome">
       <div class="welcome__container container">
         <div class="welcome__content">
           <div class="welcome__info">
@@ -103,7 +103,39 @@
           </div>
         </div>
       </div>
-    </sectioon>
+    </section>
+
+    <!-- FORM -->
+    <div id="js-wrapper-shaded" class="">
+      <div class="form">
+        <span class="form__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M5.41406 4.33594L4.33594 5.41406L10.9219 12L4.33594 18.5859L5.41406 19.6641L12 13.0781L18.5859 19.6641L19.6641 18.5859L13.0781 12L19.6641 5.41406L18.5859 4.33594L12 10.9219L5.41406 4.33594Z" fill="#110F0E"/>
+          </svg>
+        </span>
+        <h3 class="form__tittle">Оставить заявку</h3>
+        <p class="form__subtittle">
+          Менеджеры компании с радостью ответят на ваши вопросы<br>и&nbsp;произведут расчет стоимости услуги.
+        </p>
+        <form onsubmit="return validateForm(this)" action="#" method="get" class="form__data">
+          <div class="form__field">
+            <label for="js-input-name" class="form__label">
+              Ваше имя
+              <span class="star">*</span>
+            </label>
+            <input id="js-input-name" type="text" name="name" class="form__input" placeholder="Александр" required>
+          </div>
+          <div class="form__field">
+            <label for="js-input-phone" class="form__label">
+              Телефон
+              <span class="star">*</span>
+            </label>
+            <input id="js-input-phone" type="tel" name="phone" class="form__input" placeholder="+375291234567" required>
+          </div>
+          <button onsubmit="return validateForm(form)" type="submit" class="form__button button button_colored">Отправить</button>
+        </form>
+      </div>
+    </div>
   </div>
 
   <script src="js/js.js"></script>
